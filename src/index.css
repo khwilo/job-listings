@@ -1,0 +1,159 @@
+:root {
+  --clr-primary: hsl(180, 29%, 50%);
+  --clr-background: hsl(180, 52%, 96%);
+  --clr-filter-tablets: hsl(180, 31%, 95%);
+  --clr-dark-grayish-cyan: hsl(180, 8%, 52%);
+  --clr-more-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-background);
+  font-size: 0.9375rem;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.banner {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.text-gray {
+  color: var(--clr-dark-grayish-cyan);
+}
+
+.cards {
+  margin-top: 5em;
+}
+
+.card {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  font-weight: var(--fw-bold);
+  border-radius: 10px;
+  padding: 1em;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: -3em;
+}
+
+.card__content {
+  margin-top: 3em;
+}
+
+.card__header {
+  align-items: center;
+}
+
+@media (max-width: 410px) {
+  .card__header {
+    display: block;
+  }
+}
+
+.company {
+  font-size: 1.2rem;
+}
+
+.priority {
+  justify-content: flex-end;
+}
+
+@media (max-width: 410px) {
+  .priority {
+    display: inline-flex;
+    justify-content: start;
+  }
+}
+
+.priority__name {
+  text-transform: uppercase;
+  color: var(--clr-white);
+  padding: 0.5em 1em;
+  border-radius: 100px;
+}
+
+.new {
+  background-color: var(--clr-primary);
+}
+
+.featured {
+  background-color: var(--clr-more-dark-grayish-cyan);
+}
+
+.priority__name + .priority__name {
+  margin-left: 0.5em;
+}
+
+.position {
+  color: var(--clr-more-dark-grayish-cyan);
+  font-size: 1.5rem;
+}
+
+.card__footer-item {
+  font-weight: var(--fw-regular);
+}
+
+.card__footer-item + .card__footer-item {
+  margin-left: 0.5em;
+}
+
+.card__content::after {
+  content: '';
+  background-color: var(--clr-dark-grayish-cyan);
+  width: 90%;
+  height: 1px;
+  position: absolute;
+}
+
+.tags {
+  margin: 1em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags__item {
+  background-color: var(--clr-filter-tablets);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.tags__item p {
+  margin: 0;
+}
