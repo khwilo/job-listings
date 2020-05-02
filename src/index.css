@@ -26,6 +26,7 @@ body {
   margin: 0;
   background-color: var(--clr-background);
   font-size: 0.9375rem;
+  font-family: 'Spartan', sans-serif;
 }
 
 p {
