@@ -16,7 +16,7 @@ function App() {
             </div>
 
             <div className='card__content'>
-              <div className='card__header row'>
+              <div className='content__top row'>
                 <p className='company'>Photosnap</p>
                 <div className='priority row'>
                   <p className='priority__name new'>new</p>
@@ -24,18 +24,20 @@ function App() {
                 </div>
               </div>
 
-              <div className='row'>
+              <div className='content__middle row'>
                 <p className='position'>Senior Frontend Developer</p>
               </div>
 
-              <div className='row'>
-                <p className='card__footer-item posted-time text-gray'>
+              <div className='content__bottom row'>
+                <p className='content__bottom-item posted-time text-gray'>
                   1d ago
                 </p>
-                <p className='card__footer-item contract text-gray'>
+                <p className='content__bottom-item contract text-gray'>
                   Full Time
                 </p>
-                <p className='card__footer-item location text-gray'>USA Only</p>
+                <p className='content__bottom-item location text-gray'>
+                  USA Only
+                </p>
               </div>
             </div>
 
