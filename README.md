@@ -1,6 +1,6 @@
 # JOB LISTINGS
 
-Static job listing site. Visit this link https://joblistings.now.sh/ to view the website.
+Static job listing site. Visit this link <https://joblistings.now.sh/> to view the website.
 
 Applied concepts:
 
