@@ -1,0 +1,24 @@
+.tags {
+  margin: 1em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+  .tags {
+    margin: 0;
+    align-self: flex-start;
+    flex: 1;
+  }
+}
+
+.tags__item {
+  background-color: var(--clr-filter-tablets);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.tags__item p {
+  margin: 0;
+}

@@ -1,17 +1,29 @@
 import React from 'react';
 
+import Filters from '../../containers/Filters/Filters';
 import './Card.css';
 
-const Card = () => {
+const Card = ({
+  logo,
+  company,
+  position,
+  postedAt,
+  contract,
+  location,
+  role,
+  level,
+  languages,
+  tools,
+}) => {
   return (
     <article className='card'>
       <div className='logo'>
-        <img src='images/photosnap.svg' alt='company logo' />
+        <img src={logo} alt='company logo' />
       </div>
 
       <div className='card__content'>
         <div className='content__top row'>
-          <p className='company'>Photosnap</p>
+          <p className='company'>{company}</p>
           <div className='priority row'>
             <p className='priority__name new'>new</p>
             <p className='priority__name featured'>featured</p>
@@ -19,33 +31,18 @@ const Card = () => {
         </div>
 
         <div className='content__middle row'>
-          <p className='position'>Senior Frontend Developer</p>
+          <p className='position'>{position}</p>
         </div>
 
         <div className='content__bottom row'>
-          <p className='content__bottom-item posted-time text-gray'>1d ago</p>
-          <p className='content__bottom-item contract text-gray'>Full Time</p>
-          <p className='content__bottom-item location text-gray'>USA Only</p>
+          <p className='content__bottom-item posted-time text-gray'>
+            {postedAt}
+          </p>
+          <p className='content__bottom-item contract text-gray'>{contract}</p>
+          <p className='content__bottom-item location text-gray'>{location}</p>
         </div>
       </div>
-
-      <div className='tags'>
-        <div class='tags__item'>
-          <p className='role'>Frontend</p>
-        </div>
-        <div class='tags__item'>
-          <p className='level'>Senior</p>
-        </div>
-        <div class='tags__item'>
-          <p className='language'>HTML</p>
-        </div>
-        <div class='tags__item'>
-          <p className='language'>CSS</p>
-        </div>
-        <div class='tags__item'>
-          <p className='language'>JavaScript</p>
-        </div>
-      </div>
+      <Filters role={role} level={level} languages={languages} tools={tools} />
     </article>
   );
 };
