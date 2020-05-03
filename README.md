@@ -1,6 +1,6 @@
 # JOB LISTINGS
 
-Static job listing site.
+Static job listing site. Visit this link https://joblistings.now.sh/ to view the website.
 
 Applied concepts:
 
@@ -19,3 +19,7 @@ Applied concepts:
 ## TODO
 
 - Enable the ability to render a job in relation to its filter value
+
+## DEMO
+
+![Static job listing demo](https://github.com/khwilo/job-listings/blob/master/public/demo/static-job-listings-demo.gif)
