@@ -1,0 +1,29 @@
+.searchField {
+  position: absolute;
+  margin-left: 10%;
+  transform: translateY(-60%);
+}
+
+.searchFieldWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  min-height: 3em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  padding: 0 1em;
+}
+
+.searchInput:focus {
+  outline: none;
+  border: 1px solid var(--clr-white);
+}
+
+/* .clearBtn {
+  position: absolute;
+  transform: translate(-150%, 110%);
+} */
