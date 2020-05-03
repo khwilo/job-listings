@@ -6,6 +6,8 @@ import './Card.css';
 const Card = ({
   logo,
   company,
+  isNew,
+  isFeatured,
   position,
   postedAt,
   contract,
@@ -25,8 +27,10 @@ const Card = ({
         <div className='content__top row'>
           <p className='company'>{company}</p>
           <div className='priority row'>
-            <p className='priority__name new'>new</p>
-            <p className='priority__name featured'>featured</p>
+            {isNew ? <p className='priority__name new'>new</p> : null}
+            {isFeatured ? (
+              <p className='priority__name featured'>featured</p>
+            ) : null}
           </div>
         </div>
 
