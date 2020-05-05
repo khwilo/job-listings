@@ -18,7 +18,14 @@ const Card = ({
   tools,
 }) => {
   return (
-    <article className='card'>
+    <article
+      className='card'
+      style={
+        isNew && isFeatured
+          ? { borderLeft: '5px solid var(--clr-primary)' }
+          : null
+      }
+    >
       <div className='logo'>
         <img src={logo} alt='company logo' />
       </div>

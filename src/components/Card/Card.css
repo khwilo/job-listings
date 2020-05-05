@@ -2,7 +2,7 @@
   background-color: var(--clr-white);
   color: var(--clr-primary);
   font-weight: var(--fw-bold);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 1em;
   position: relative;
 }
