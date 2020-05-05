@@ -29,6 +29,12 @@ body {
   font-family: 'Spartan', sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 p {
   margin: 0.5rem;
 }

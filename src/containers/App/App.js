@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header/Header';
 import SearchField from '../../components/SearchField/SearchField';
@@ -7,19 +7,18 @@ import Cards from '../Cards/Cards';
 import './App.css';
 
 function App() {
-  const [jobs, updateJobs] = useState(data);
-  const [searchTerm, updateSearchTerm] = useState('');
+  const [jobs] = useState(data);
+  const [filters, setFilters] = useState([]);
 
-  const handleChange = (event) => {
-    const { value } = event.target;
-    updateSearchTerm(value);
+  const selected = (items) => {
+    setFilters(items);
   };
 
   return (
     <div className='wrapper'>
       <Header />
-      <SearchField handleChange={handleChange} />
-      <Cards data={jobs} searchTerm={searchTerm} />
+      <SearchField selected={selected} />
+      <Cards data={jobs} filters={filters} />
     </div>
   );
 }

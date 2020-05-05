@@ -3,20 +3,67 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import './Cards.css';
 
-const Cards = ({ data, searchTerm }) => {
-  const searchList = [];
-  searchList.push(searchTerm.toLowerCase());
+const Cards = ({ data, filters }) => {
+  const filterObj = {
+    role: '',
+    level: '',
+    contract: '',
+    location: '',
+    languages: [],
+    tools: [],
+  };
 
-  console.log('List: ', searchList);
+  filters.forEach((value) => {
+    if (value === 'Frontend' || value === 'Fullstack' || value === 'Backend') {
+      filterObj['role'] = value;
+    }
 
-  const filters = searchList[0].split(' ');
-  console.log('Filters: ', filters);
+    if (value === 'Senior' || value === 'Midweight' || value === 'Junior') {
+      filterObj.level = value;
+    } else if (
+      value === 'Full Time' ||
+      value === 'Part Time' ||
+      value === 'Contract'
+    ) {
+      filterObj['contract'] = value;
+    } else if (
+      value === 'USA Only' ||
+      value === 'Remote' ||
+      value === 'Worldwide' ||
+      value === 'UK Only'
+    ) {
+      filterObj['location'] = value;
+    } else if (
+      value === 'HTML' ||
+      value === 'CSS' ||
+      value === 'JavaScript' ||
+      value === 'Python'
+    ) {
+      filterObj['languages'] = [...filterObj['languages'], value];
+    } else if (
+      value === 'React' ||
+      value === 'Sass' ||
+      value === 'Ruby' ||
+      value === 'RoR' ||
+      value === 'Vue' ||
+      value === 'Django'
+    ) {
+      filterObj['tools'] = [...filterObj['tools'], value];
+    }
+  });
 
-  const filteredJobs = searchTerm
-    ? data.filter((job) => job.role.toLowerCase() === filters[0])
-    : data;
-
-  console.log('FiltersJOBS: ', filteredJobs);
+  const filteredJobs =
+    filters.length !== 0
+      ? data.filter((job) => {
+          let result = false;
+          for (let key in job) {
+            if (filterObj[key] && job[key] === filterObj[key]) {
+              result = true;
+            }
+          }
+          return result;
+        })
+      : data;
 
   const cardsView = filteredJobs.map((job) => {
     return (
