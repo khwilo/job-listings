@@ -2,6 +2,8 @@
 
 Static job listing site. Visit this link <https://joblistings.now.sh/> to view the website.
 
+Current issue :point_right: [Bug/Help Wanted](https://github.com/khwilo/job-listings/issues/1)
+
 Applied concepts:
 
 1. Responsive web design
