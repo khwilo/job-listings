@@ -2,8 +2,6 @@
 
 Static job listing site. Visit this link <https://joblistings.now.sh/> to view the website.
 
-Current issue :point_right: [Bug/Help Wanted](https://github.com/khwilo/job-listings/issues/1)
-
 Applied concepts:
 
 1. Responsive web design
@@ -16,11 +14,7 @@ Applied concepts:
 - [x] Display layout responsively
 - [x] Use responsive sized images for the banner
 - [x] Dynamically render a job listing from the jobs list in its own component
-- [ ] Filter jobs according to their role, level, languages and tools
-
-## TODO
-
-- Enable the ability to render a job in relation to its filter value
+- [x] Filter jobs by role, level, contract, location, languages and tools
 
 ## DEMO
 
