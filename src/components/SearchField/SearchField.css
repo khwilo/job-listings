@@ -1,6 +1,4 @@
 .searchField {
-  position: absolute;
-  margin-left: 10%;
   transform: translateY(-60%);
   background-color: var(--clr-white);
   border-radius: 5px;
