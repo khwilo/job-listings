@@ -48,6 +48,7 @@ const SearchField = ({ value, selected }) => {
           type='text'
           value={value}
           placeholder='Press enter to add filters'
+          aria-label='filter input field'
           onKeyUp={(event) =>
             event.key === 'Enter' ? addFilters(event) : null
           }
