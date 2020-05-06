@@ -1,12 +1,18 @@
 .searchField {
-  transform: translateY(-60%);
+  transform: translateY(-30px);
   background-color: var(--clr-white);
   border-radius: 5px;
 }
 
+@media (min-width: 35em) {
+  .searchField {
+    transform: translateY(-50px);
+  }
+}
+
 .filters {
   position: relative;
-  padding: 1.5em 1em;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -26,8 +32,8 @@
 }
 
 .filter {
-  padding: 0.2rem 0.5rem;
-  display: inline-flex;
+  padding: 0.3rem;
+  display: block;
 }
 
 .searchInput {
@@ -51,7 +57,6 @@
 }
 
 .closeBtn {
-  margin-left: 0.5em;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
