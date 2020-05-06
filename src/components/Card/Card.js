@@ -18,7 +18,7 @@ const Card = ({
   tools,
 }) => {
   return (
-    <article
+    <div
       className='card'
       style={
         isNew && isFeatured
@@ -54,7 +54,7 @@ const Card = ({
         </div>
       </div>
       <Filters role={role} level={level} languages={languages} tools={tools} />
-    </article>
+    </div>
   );
 };
 
